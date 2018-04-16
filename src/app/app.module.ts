@@ -1,18 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { ReportsModule } from './reports/reports.module';
+import { ReportsComponent } from './reports/reports.component';
+
+import { CoreModule } from 'core-eagle/modules/esm2015/core-eagle.js';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ReportsComponent
   ],
   imports: [
     BrowserModule,
-    ReportsModule
+    CoreModule, // TODO: move this to reports module!!!
+    RouterModule.forRoot([
+      { path: '', pathMatch: 'full', component: AppComponent },
+      { path: 'core', component: ReportsComponent }
+    ])
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AppComponent]
 })
 export class AppModule { }
