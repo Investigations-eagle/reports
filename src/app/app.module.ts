@@ -3,21 +3,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { ReportsComponent } from './reports/reports.component';
+import { ReportsModule } from './main/reports/reports.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ReportsComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    ReportsModule,
     RouterModule.forRoot([
-      { path: '', pathMatch: 'full', component: ReportsComponent },
-      {
-        path: 'core',
-        loadChildren: './core-wrapper/core-wrapper.module#CoreWrapperModule'
-      }
+      { path: '', pathMatch: 'full', component: AppComponent }
     ])
   ],
   bootstrap: [AppComponent],
