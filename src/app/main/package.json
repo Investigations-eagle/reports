@@ -1,5 +1,5 @@
 {
-  "name": "reports",
+  "name": "eagle-reports",
   "version": "1.0.0",
   "peerDepenencies": {
     "@angular/animations": "^5.2.0",
