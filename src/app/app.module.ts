@@ -5,19 +5,19 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ReportsComponent } from './reports/reports.component';
 
-import { CoreModule } from 'core-eagle/modules/esm2015/core-eagle.js';
-
 @NgModule({
   declarations: [
     AppComponent,
-    ReportsComponent
+    ReportsComponent,
   ],
   imports: [
     BrowserModule,
-    CoreModule, // TODO: move this to reports module!!!
     RouterModule.forRoot([
-      { path: '', pathMatch: 'full', component: AppComponent },
-      { path: 'core', component: ReportsComponent }
+      { path: '', pathMatch: 'full', component: ReportsComponent },
+      {
+        path: 'core',
+        loadChildren: './core-wrapper/core-wrapper.module#CoreWrapperModule'
+      }
     ])
   ],
   bootstrap: [AppComponent],
