@@ -5,7 +5,9 @@ import { RouterModule } from '@angular/router';
 import { ReportsListComponent } from '../reports-list/reports-list.component';
 import { ReportsDetailsComponent } from '../report-details/reports-details.component';
 import { ReportsComponent } from './reports.component';
+import * as moment from 'moment';
 
+console.error('moment', moment);
 
 @NgModule({
   imports: [
