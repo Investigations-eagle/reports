@@ -1,6 +1,9 @@
 {
   "name": "eagle-reports",
-  "version": "1.0.4",
+  "version": "1.0.5",
+  "bundleDependencies": [
+    "moment"
+  ],
   "dependencies": {
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
@@ -13,7 +16,6 @@
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.5.6",
-    "zone.js": "^0.8.19",
-    "moment": "^2.22.1"
+    "zone.js": "^0.8.19"
   }
 }
