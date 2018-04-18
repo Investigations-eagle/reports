@@ -1,7 +1,7 @@
 {
   "name": "eagle-reports",
-  "version": "1.0.1",
-  "peerDepenencies": {
+  "version": "1.0.2",
+  "depenencies": {
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
