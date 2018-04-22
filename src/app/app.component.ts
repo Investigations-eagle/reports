@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import config from '../core-bundle-adapter';
 
-@Component({
+
+@config._Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

@@ -1,20 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-
+import config from '../core-bundle-adapter';
 import { AppComponent } from './app.component';
-import { ReportsModule } from './main/reports/reports.module';
 
-@NgModule({
+
+@config._NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    ReportsModule,
-    RouterModule.forRoot([
-      { path: '', pathMatch: 'full', component: AppComponent }
-    ])
+    config._BrowserModule,
   ],
   bootstrap: [AppComponent],
   entryComponents: [AppComponent]
